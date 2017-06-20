@@ -5,6 +5,7 @@ function helloWorld() {
 function calc() {
    alert("aieee");
 
-   //   alert("document.Calculator.Display="+document.Calculator.Display);
-//   document.Calculator.Margin.value = 55;
+   alert("document.Calculator.PayDayIncl="+document.Calculator.PayDayIncl);
+   alert("document.Calculator.BillDay="+document.Calculator.BillDay);
+   document.Calculator.Margin.value = 55;
  }
