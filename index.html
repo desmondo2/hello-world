@@ -7,27 +7,29 @@
   <title>Tec Calc HTML5</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
+<!--
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-
+-->
   <style>
-table#customers {
-    font-size:16px;
+table#calculator {
+    font-size:14px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+	width:300px;
 }
 
-#customers td, #customers th {
+#calculator td, #calculator th {
     border: 1px solid #ddd;
     text-align: left;
     padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2}
+<!--
+#calculator tr:nth-child(even){background-color: #f2f2f2}
+-->
 
-#customers th {
+#calculator th {
     padding-top: 11px;
     padding-bottom: 11px;
     background-color: #4CAF50;
@@ -40,36 +42,104 @@ table#customers {
   
   <script src="js/scripts.js"></script>
   
-  <p>Attention! This is the main page, yeah</p>
+  <p>Yo! This is the main page, yeah</p>
   
-<FORM name="Calculator" onsubmit="calc();">
-      <table id=calculator>
-       <tr>
-         <td>
-           Pay Daily Incl. Super
-         </td><td>
-           <input type="text" maxlength="6" size="10" name="PayDayIncl"></td>
-         </td>
-       </tr><tr>
-         <td>
-           Bill Rate Daily
-         </td><td>
-           <input type="text" maxlength="6" size="10" name="BillDay">
-         </td>
-       </tr><tr>
-         <td>
-           Margin
-         </td><td>
-           <input type="text" maxlength="6" size="10" name="Margin">
-         </td>
-       </tr><tr>
-         <td>
-         </td><td>
-           <input type="button" name="DoIt" onclick="calc();">
-         </td>
-       </tr>
-      </table>
-</FORM>
+<form name="Calculator" onsubmit="calc();">
+    <table id=calculator>
+		<tr>
+			<td colspan=2 style="background-color:#4CAF50; color:white">
+				Contractor Details
+			</td>
+		</tr><tr>
+			<td>
+				Pay Rate
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="PayRate">
+			</td>
+		</tr><tr>
+			<td>
+				Period
+			</td><td>
+				<input type="radio" name="PayPeriod" value="Hourly">Hourly</input>
+				<input type="radio" name="PayPeriod" value="Daily" checked>Daily</input>
+			</td>
+		</tr><tr>
+			<td>
+				Super
+			</td><td>
+				<input type="radio" name="PaySuper" value="Included" checked>Super Incl</input>
+				<input type="radio" name="PaySuper" value="Excluded">Super Excl</input>
+			</td>
+		</tr><tr>
+			<td colspan=2 style="background-color:#42cbf4; color:black">
+				Client Details
+			</td>
+		</tr><tr>
+			<td>
+				Bill Rate
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="BillRate">
+			</td>
+		</tr><tr>
+			<td>
+				Period
+			</td><td>
+				<input type="radio" name="BillPeriod" value="Hourly">Hourly</input>
+				<input type="radio" name="BillPeriod" value="Daily" checked>Daily</input>
+		</tr><tr>
+			<td colspan=2 style="background-color:#ad42f4; color:white">
+				Aji Calculations
+				&nbsp; &nbsp;
+				<input type="button" name="DoIt" onclick="calc();" value="Calculate Now">
+			</td>
+		</tr><tr>
+			<td>
+				Margin %
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="MarginPct">
+			</td>
+		</tr><tr>
+			<td>
+				Margin $/d
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="MarginDollars">
+			</td>
+		</tr><tr>
+			<td>
+				TEC $/d
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="TEC">
+			</td>
+		</tr><tr>
+			<td colspan=2 style="background-color:#4CAF50; color:white">
+				Contractor Calculations
+		</tr><tr>
+			<td>
+				Pay $/h Excl
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="PayPerHourExcl">
+			</td>
+		</tr><tr>
+			<td>
+				Pay $/h Incl
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="PayPerHourIncl">
+			</td>
+			</td>
+		</tr><tr>
+			<td>
+				Pay $/d Excl
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="PayPerDayExcl">
+			</td>
+		</tr><tr>
+			<td>
+				Pay $/d Incl
+			</td><td>
+				<input type="text" maxlength="6" size="10" name="PayPerDayIncl">
+		</tr>
+	</table>
+</form>
   
 </body>
 </html>
