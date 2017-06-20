@@ -3,6 +3,8 @@ function helloWorld() {
 }
 
 function calc() {
-   alert("document.Calculator.Display="+document.Calculator.Display);
-   document.Calculator.Margin.value = 55;
+   alert("aieee");
+
+   //   alert("document.Calculator.Display="+document.Calculator.Display);
+//   document.Calculator.Margin.value = 55;
  }
